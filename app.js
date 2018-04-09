@@ -15,7 +15,6 @@ app.use(bodyParser.json({ type: "*/*" }));
 mongoose.Promise = Promise;
 mongoose.set("debug", true);
 mongoose
-  // .connect("mongodb://localhost/Linked-List")
   .connect(process.env.MONGODB_URI || "mongodb://localhost/Linked-List", {
     useMongoClient: true
   })
