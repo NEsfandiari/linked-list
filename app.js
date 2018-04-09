@@ -15,9 +15,13 @@ app.use(bodyParser.json({ type: "*/*" }));
 mongoose.Promise = Promise;
 mongoose.set("debug", true);
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/Linked-List", {
-    useMongoClient: true
-  })
+  .connect(
+    "mongodb://heroku_7vlg5cpt:iajpmpopnlm8l6movsr17j4h21@ds241059.mlab.com:41059/heroku_7vlg5cpt" ||
+      "mongodb://localhost/Linked-List",
+    {
+      useMongoClient: true
+    }
+  )
   .then(() => {
     console.log("Connected to db");
   })
