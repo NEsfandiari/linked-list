@@ -16,7 +16,7 @@ mongoose.Promise = Promise;
 mongoose.set("debug", true);
 mongoose
   // .connect("mongodb://localhost/Linked-List")
-  .connect("mongodb://localhost/Linked-List")
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/Linked-List")
   .then(() => {
     console.log("Connected to db");
   })
