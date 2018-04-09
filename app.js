@@ -36,7 +36,7 @@ app.use("/jobs", jobsRouter);
 app.use("/companies", companiesRouter);
 
 app.get("/", (req, res, next) => {
-  return res.redirect("/users");
+  return res.send("start by posting to /users to get authed");
 });
 
 app.post("/:x/login", function Authenticate(req, res, next) {
