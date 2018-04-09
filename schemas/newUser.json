@@ -1,0 +1,52 @@
+{
+  "$id": "localhost:7777/users/",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "$id": "/properties/firstName",
+      "type": "string",
+      "title": "The First Name Schema",
+      "default": "",
+      "examples": "Mark",
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "lastName": {
+      "$id": "/properties/lastName",
+      "type": "string",
+      "title": "The Last Name Schema",
+      "default": "",
+      "examples": "Suzuki",
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "username": {
+      "$id": "/properties/username",
+      "type": "string",
+      "title": "The Username Schema",
+      "default": "",
+      "examples": "troll777",
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "email": {
+      "$id": "/properties/email",
+      "type": "string",
+      "title": "The Email Schema",
+      "default": "",
+      "examples": "runescape@gmail.com",
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "password": {
+      "$id": "/properties/password",
+      "type": "string",
+      "title": "The Password Schema",
+      "default": "",
+      "examples": "runescape1234",
+      "minLength": 1,
+      "maxLength": 55
+    }
+  },
+  "required": ["firstName", "lastName", "username", "email", "password"]
+}

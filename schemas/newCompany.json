@@ -1,0 +1,43 @@
+{
+  "$id": "localhost:7777/companies/",
+  "type": "object",
+  "properties": {
+    "name": {
+      "$id": "/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": "SuzukiMemes",
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "email": {
+      "$id": "/properties/email",
+      "type": "string",
+      "title": "The Email Schema",
+      "default": "",
+      "examples": "SuzukiMemes",
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "handle": {
+      "$id": "/properties/handle",
+      "type": "string",
+      "title": "The Handle Schema",
+      "default": "",
+      "examples": "@plzwork",
+      "minLength": 1,
+      "maxLength": 55
+    },
+    "password": {
+      "$id": "/properties/name",
+      "type": "string",
+      "title": "The Password Schema",
+      "default": "",
+      "examples": "runescape1234",
+      "minLength": 1,
+      "maxLength": 55
+    }
+  },
+  "required": ["name", "email", "handle", "password"]
+}
