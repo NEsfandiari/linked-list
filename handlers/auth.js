@@ -7,7 +7,7 @@ function ensureUser(req, res, next) {
     req.headers.authorization && req.headers.authorization.split(" ")[1];
 
   const token = headerToken;
-  if (!token) return false;
+  if (!token) return res.send("sign in as a User!");
   else if (jwt.decode(token).username) {
     return TokenCheck(req, res, next);
   } else {
@@ -20,7 +20,7 @@ function ensureCompany(req, res, next) {
     req.headers.authorization && req.headers.authorization.split(" ")[1];
 
   const token = headerToken;
-  if (!token) return false;
+  if (!token) return res.send("sign in as a User!");
   else if (jwt.decode(token)) {
     return TokenCheck(req, res, next);
   } else {
