@@ -15,6 +15,7 @@ app.use(bodyParser.json({ type: "*/*" }));
 mongoose.Promise = Promise;
 mongoose.set("debug", true);
 mongoose
+  // .connect("mongodb://localhost/Linked-List")
   .connect("mongodb://localhost/Linked-List")
   .then(() => {
     console.log("Connected to db");
@@ -82,7 +83,8 @@ app.use((err, req, res, next) =>
   })
 );
 
-const PORT = 7777;
+const PORT = process.env.PORT || 7777;
+
 app.listen(PORT, () => {
-  console.log(`listening!`);
+  console.log(`listening at ${PORT}`);
 });
